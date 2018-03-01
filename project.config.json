@@ -1,0 +1,9 @@
+{
+	"description": "项目配置文件。",
+	"compileType": "miniprogram",
+	"libVersion": "1.7.1",
+	"appid": "wxb64c1dcb503563e1",
+	"projectname": "Acronsh小程序",
+	"setting": {},
+	"condition": {}
+}

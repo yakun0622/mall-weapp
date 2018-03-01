@@ -1,0 +1,16 @@
+<template>
+  <view>Order Page</view>
+</template>
+
+<script>
+export default {
+  config: {
+    navigationBarTitleText: '我的订单',
+    usingComponents: {}
+  },
+  data: {}
+}
+</script>
+
+<style>
+</style>

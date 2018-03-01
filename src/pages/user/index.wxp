@@ -1,0 +1,16 @@
+<template>
+  <view>User Page</view>
+</template>
+
+<script>
+export default {
+  config: {
+    navigationBarTitleText: '我的',
+    usingComponents: {}
+  },
+  data: {}
+}
+</script>
+
+<style>
+</style>

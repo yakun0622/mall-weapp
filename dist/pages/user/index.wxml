@@ -1,0 +1,24 @@
+<view>
+    <wxc-tab
+    bind:tabchange="onClick"
+    default-index="{{0}}"
+    active-text-color="#108ee9"
+    active-line-color="#108ee9"
+    component-id="c2"
+    animate="{{true}}"
+  >
+    <wxc-tab-panel
+      wx:for="{{tabs}}"
+      wx:for-item="tab"
+      wx:key="{{tab.content}}"
+      tab-index="{{index}}"
+      component-id="c2"
+      label="{{tab.title}}"
+    >
+    <view wx:if="{{!tab.content}}"> {{tab.content}} </view>
+    <view wx:else>
+    <wxc-abnor type="ORDER"></wxc-abnor>
+    </view>
+    </wxc-tab-panel>
+  </wxc-tab>
+</view>

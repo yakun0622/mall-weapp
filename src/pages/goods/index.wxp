@@ -1,0 +1,16 @@
+<template>
+  <view>Goods Page</view>
+</template>
+
+<script>
+export default {
+  config: {
+    navigationBarTitleText: '商品列表',
+    usingComponents: {}
+  },
+  data: {}
+}
+</script>
+
+<style>
+</style>

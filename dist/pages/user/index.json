@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "wxc-tab": "../../packages/@minui/wxc-tab/dist/index",
+    "wxc-tab-panel": "../../packages/@minui/wxc-tab/dist/panel",
+    "wxc-tab-label": "../../packages/@minui/wxc-tab/dist/label",
+    "wxc-abnor": "../../packages/@minui/wxc-abnor/dist/index"
+  },
+  "navigationBarTitleText": "我的"
+}
