@@ -1,6 +1,12 @@
 {
   "usingComponents": {
-    "layout-head": "../../common/layout/head",
-    "layout-foot": "../../common/layout/foot"
+    "search": "../../common/search/index",
+    "layout-foot": "../../common/layout/foot",
+    "wxc-flex": "../../packages/@minui/wxc-flex/dist/index",
+    "wxc-avatar": "../../packages/@minui/wxc-avatar/dist/index",
+    "wxc-label": "../../packages/@minui/wxc-label/dist/index",
+    "wxc-icon": "../../packages/@minui/wxc-icon/dist/index",
+    "wxc-loadmore": "../../packages/@minui/wxc-loadmore/dist/index",
+    "wxc-price": "../../packages/@minui/wxc-price/dist/index"
   }
 }

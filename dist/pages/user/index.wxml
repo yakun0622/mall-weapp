@@ -10,12 +10,18 @@
     <wxc-tab-panel
       wx:for="{{tabs}}"
       wx:for-item="tab"
-      wx:key="{{tab.content}}"
+      wx:key="{{tab.status}}"
       tab-index="{{index}}"
       component-id="c2"
-      label="{{tab.title}}"
+      label="{{tab.status}}"
     >
-    <view wx:if="{{!tab.content}}"> {{tab.content}} </view>
+    <view wx:if="{{tab.list.length > 0}}">
+      <view wx:for="{{tab.list}}"
+      wx:for-item="order"
+      wx:key="{{order.orderNo}}">
+      {{order.orderNo}}
+      </view>
+    </view>
     <view wx:else>
     <wxc-abnor type="ORDER"></wxc-abnor>
     </view>

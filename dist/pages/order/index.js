@@ -4,9 +4,38 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = Page({
+
   data: {
-    '__code__': {
-      readme: ''
+    tabs: [
+      {
+        status: '全部', list: [
+          { orderNo: '11111111111111111' },
+          { orderNo: '222222222222222222' },
+          { orderNo: '333333333333333333' },
+          { orderNo: '444444444444444444' }
+        ]
+      },
+      { status: '待付款', list: [] },
+      {
+        status: '审核中', list: [
+          { orderNo: '222222222222222222' }
+        ]
+      },
+      {
+        status: '待发货', list: [
+          { orderNo: '333333333333333333' }
+        ]
+      },
+      {
+        status: '待评价', list: [
+          { orderNo: '444444444444444444' }
+        ]
+      }
+    ]
+  },
+  methods: {
+    onClick: function (e) {
+      console.log(`ComponentId:${e.detail.componentId},you selected:${e.detail.key}`);
     }
   }
 });

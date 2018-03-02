@@ -5,5 +5,5 @@
     "wxc-tab-label": "../../packages/@minui/wxc-tab/dist/label",
     "wxc-abnor": "../../packages/@minui/wxc-abnor/dist/index"
   },
-  "navigationBarTitleText": "我的订单"
+  "navigationBarTitleText": "购物车"
 }

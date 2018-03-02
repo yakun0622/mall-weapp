@@ -1,0 +1,3 @@
+<view>
+    <wxc-abnor type="CART" bind:abnortap="goIndex"></wxc-abnor>
+</view>

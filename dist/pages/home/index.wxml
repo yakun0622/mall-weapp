@@ -1,21 +1,38 @@
+<search _pid="{{_pid}}"></search>
 <view>
-    <layout-head _pid="{{_pid}}"></layout-head>
-
-    <!-- wxp template -->
-    <view>
-        <view class="index-hd">
-            <image class="index-logo" src="https://s10.mogucdn.com/mlcdn/c45406/171122_5l92i48kb80j1fkha1fh1cd3h43i5_200x200.png"></image>
-            <view class="index-desc">MinUI-小程序</view>
+  <swiper class='slider' indicator-dots="{{true}}" autoplay="{{true}}" interval="{{interval}}" duration="{{duration}}" circular="{{true}}">
+    <block wx:for="{{imgUrls}}"
+    wx:key="{{index}}">
+      <swiper-item>
+        <image bindtap="tapBanner" src="{{item}}" class="slide-image" height="481rpx" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 快捷操作 -->
+  <!-- <wxc-flex class="shortcuts-wrap" wrap="wrap">
+    <view class="shortcuts-item">栏 1</view>
+    <view class="shortcuts-item">栏 2</view>
+    <view class="shortcuts-item">栏 3</view>
+    <view class="shortcuts-item">栏 4</view>
+  </wxc-flex> -->
+<!-- 推荐商品-->
+  <wxc-flex class="goods-list-wrap" cross="top" wrap="wrap">
+  <view class="goods-box" wx:for-items="{{goods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
+           <view class="img-box">
+              <image src="{{item.pic}}" class="image" mode="aspectFill" lazy-load="true"/>
+           </view>
+           <view class="goods-title">{{item.name}}</view>
+           <wxc-label class="store-name" type-color="#747bb1">海牛自营</wxc-label>
+           <view style='display:flex;'>
+            <wxc-price class="goods-price" value="{{item.minPrice}}" decimal="small"></wxc-price>
+            <wxc-price wx:if="{{item.originalPrice && item.originalPrice > 0}}" status="del" class="goods-price" del-color="#aaa">140.00</wxc-price>
+           </view>           
         </view>
-
-        <view class="index-bd">
-            Hello World
-        </view>
-
-        <view class="index-ft">
-            <view class="provider">Created by Min</view>
-        </view>
-    </view>
-
-    <layout-foot _pid="{{_pid}}"></layout-foot>
+  </wxc-flex>
+  <!-- <wxc-loadmore is-end="{{true}}"></wxc-loadmore> -->
+  <wxc-loadmore
+    is-end="{{true}}"
+    text="我是有底线的"
+  >
+  </wxc-loadmore>
 </view>

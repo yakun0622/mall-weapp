@@ -5,7 +5,8 @@
     "pages/goods/index",
     "pages/order-detail/index",
     "pages/order/index",
-    "pages/user/index"
+    "pages/user/index",
+    "pages/cart/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -20,6 +21,11 @@
         "text": "首页",
         "iconPath": "images/icon/home.png",
         "selectedIconPath": "images/icon/home-selected.png"
+      },{
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "images/icon/cart.png",
+        "selectedIconPath": "images/icon/cart-selected.png"
       },{
         "pagePath": "pages/user/index",
         "text": "我的",

@@ -6,9 +6,13 @@
   "license": "MIT",
   "dependencies": {
     "@minui/wxc-abnor": "^1.0.7",
+    "@minui/wxc-avatar": "^1.0.4",
     "@minui/wxc-cc": "^1.0.3",
     "@minui/wxc-flex": "^1.0.5",
+    "@minui/wxc-icon": "^1.0.8",
     "@minui/wxc-label": "^1.0.5",
+    "@minui/wxc-loadmore": "^1.0.5",
+    "@minui/wxc-price": "^1.0.8",
     "@minui/wxc-tab": "^1.0.7",
     "@minui/wxc-toast": "^1.0.8"
   },
