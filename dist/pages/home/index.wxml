@@ -1,38 +1,39 @@
 <search _pid="{{_pid}}"></search>
 <view>
   <swiper class='slider' indicator-dots="{{true}}" autoplay="{{true}}" interval="{{interval}}" duration="{{duration}}" circular="{{true}}">
-    <block wx:for="{{imgUrls}}"
-    wx:key="{{index}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item>
         <image bindtap="tapBanner" src="{{item}}" class="slide-image" height="481rpx" />
       </swiper-item>
     </block>
   </swiper>
   <!-- 快捷操作 -->
-  <!-- <wxc-flex class="shortcuts-wrap" wrap="wrap">
-    <view class="shortcuts-item">栏 1</view>
-    <view class="shortcuts-item">栏 2</view>
-    <view class="shortcuts-item">栏 3</view>
-    <view class="shortcuts-item">栏 4</view>
-  </wxc-flex> -->
-<!-- 推荐商品-->
+  <wxc-flex class="shortcuts-wrap" wrap="wrap">
+     <view class="shortcuts-item"
+     wx:for="{{shortcuts}}"
+     wx:key="{{index}}"
+     wx:for-item="shortcut"> 
+        <wxc-avatar class="avatar">
+     <image src="{{shortcut.image}}"></image> 
+    </wxc-avatar>
+        <view class="shortcuts-text">{{shortcut.title}}</view>
+     </view>
+  </wxc-flex>
+  <!-- 推荐商品-->
   <wxc-flex class="goods-list-wrap" cross="top" wrap="wrap">
-  <view class="goods-box" wx:for-items="{{goods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
-           <view class="img-box">
-              <image src="{{item.pic}}" class="image" mode="aspectFill" lazy-load="true"/>
-           </view>
-           <view class="goods-title">{{item.name}}</view>
-           <wxc-label class="store-name" type-color="#747bb1">海牛自营</wxc-label>
-           <view style='display:flex;'>
-            <wxc-price class="goods-price" value="{{item.minPrice}}" decimal="small"></wxc-price>
-            <wxc-price wx:if="{{item.originalPrice && item.originalPrice > 0}}" status="del" class="goods-price" del-color="#aaa">140.00</wxc-price>
-           </view>           
-        </view>
+    <view class="goods-box" wx:for-items="{{goods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
+      <view class="img-box">
+        <image src="{{item.pic}}" class="image" mode="aspectFill" lazy-load="true" />
+      </view>
+      <view class="goods-title">{{item.name}}</view>
+      <wxc-label class="store-name" type-color="#747bb1">海牛自营</wxc-label>
+      <view style='display:flex;'>
+        <wxc-price class="goods-price" value="{{item.minPrice}}" decimal="small"></wxc-price>
+        <wxc-price wx:if="{{item.originalPrice && item.originalPrice > 0}}" status="del" class="goods-price" del-color="#aaa">140.00</wxc-price>
+      </view>
+    </view>
   </wxc-flex>
   <!-- <wxc-loadmore is-end="{{true}}"></wxc-loadmore> -->
-  <wxc-loadmore
-    is-end="{{true}}"
-    text="我是有底线的"
-  >
+  <wxc-loadmore is-end="{{true}}" text="我是有底线的">
   </wxc-loadmore>
 </view>

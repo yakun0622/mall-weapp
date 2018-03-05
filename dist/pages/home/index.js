@@ -10,6 +10,12 @@ exports.default = Page({
       'https://hinew.com.cn/hinewservice/upload/images/banner-2.png',
       'https://hinew.com.cn/hinewservice/upload/images/banner-3.png'
     ],
+    shortcuts: [
+      { title: '办公用品', image: '../../images/shortcut/bangong.png' },
+      { title: '工程物资', image: '../../images/shortcut/gongcheng.png' },
+      { title: '环境物资', image: '../../images/shortcut/huanjing.png' },
+      { title: '安保物资', image: '../../images/shortcut/anbao.png' },
+    ],
     indicatorDots: false,
     autoplay: false,
     interval: 5000,
