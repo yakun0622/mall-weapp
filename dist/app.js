@@ -4,7 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = App({
-  globalData: {},
+  globalData: {
+    userInfo: null,
+    domain: "http://yakun0622.free.ngrok.cc"
+  },
   onLaunch: function onLaunch() {},
   onShow: function onShow() {},
   onHide: function onHide() {}
